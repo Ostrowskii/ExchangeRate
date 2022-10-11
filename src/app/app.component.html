@@ -1,17 +1,17 @@
 <h1>Exchange Rate</h1>
 
 <div>
-  <input type="number" min="1" [(ngModel)]="valor1"><br>
-  <select name="firstValue" id="firstValue" [(ngModel)]="coin1"><!-- diretiva -->
+  <input type="number" min="1" [(ngModel)]="valor1" (input)="exchangeRate()"><br>
+  <select name="firstValue" id="firstValue" [(ngModel)]="coin1" (input)="exchangeRate()"> <!-- diretiva -->
     <option *ngFor="let coin1 of currencyLabels" [value]="coin1">{{coin1}}</option>
   </select>
 </div>
 
 <div>
   <input type="number" readonly min="1" [(ngModel)]="valor2"> <br>
-  <select name="secondValue" id="secondValue" [(ngModel)]="coin2">
+  <select name="secondValue" id="secondValue" [(ngModel)]="coin2" (input)="exchangeRate()">
     <option *ngFor="let coin2 of currencyLabels" [value]="coin2">{{coin2}}</option>
   </select>
 </div> <br>
-<input type="submit" id="submit" (click)="exchangeRate()">
+<!-- <input type="submit" id="submit" (click)="exchangeRate()"> -->
 <!-- ExchangeRate -->

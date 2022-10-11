@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   currencyLabels: string[] = []; //serve para pegar a lista de moedas
   constructor(private currencyService: CurrencyService) {}
   ngOnInit() {
-    console.log('vai funcionar');
+    console.log('vai dar bom');
     this.getCurrency('BRL');
   }
   getCurrency(currency: string) {
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
     this.currencyService.get(this.coin1).subscribe({
       next: (res) => {
         console.log(res.rates);
-        this.valor2 = parseFloat((this.valor1 * res.rates[this.coin2]).toFixed(2))
+        this.valor2 = parseFloat((this.valor1 * res.rates[this.coin2]).toFixed(4))
       },
     });
   }
