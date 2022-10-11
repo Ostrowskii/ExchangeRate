@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(1, 85, 124, 1) 23%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+h1 {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+select {
+  width: 180px;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+div {
+  display: inline-block;
+  margin: 20px;
+}
+input {
+  padding: 0.5rem;
+  width: 160px;
+}
+#submit {
+  width: 180px;
+
+}
